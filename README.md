@@ -1,2 +1,2 @@
 # Proyecto-MTG-CARDS
-Esté repositorio es diseñado para la asignatura de programación y diseño de aplicaciones.
+Este desarrollo web está diseñado para mostrar productos de sumo interés para personas coleccionistas de cartas de pokemon, yu-gi-oh!, Magic The Gathering y cartas sueltas de muchas mas franquicias. 
