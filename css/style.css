@@ -1,26 +1,46 @@
+/*RESET*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*Desplazaiento suave del html*/
 html{
     scroll-behavior: smooth;
 }
-
+/*Configuraciones Generales*/
 body {
     margin:0;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family:'Bitcount Ink', sans-serif;
     color: #444F9C;
     background-color: #963581;
     overflow-x: hidden;
 }
 
+.bitcount-ink{
+  font-family: "Bitcount Ink", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
+
+/*Contenedor Principal*/
 .container { width: min(1100px, 
             calc(100% - 2rem)); 
             margin: 0 auto; 
             }
 
+/*Configuraciones para el header-Encabezado*/
 .sitio-header{
     position: sticky;
     top: 0;
@@ -30,6 +50,7 @@ body {
     border-bottom: 1px solid var(--line);
 }
 
+/*Configuraciones internas del encabezado-header-inner*/
 .header-inner {
     display: flex;
     align-items: center;
@@ -38,11 +59,91 @@ body {
     min-height: 80px;
 }
 
+
 .logo{display: flex;
   align-items: center;
-  gap: .6rem;
-  font-family: "Fraunces", serif;
+  gap: 0.6rem;
+  font-family: 'Bitcount Ink', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   color: black;
+  text-decoration:none;
+}
+
+/*Listas*/
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/*Enlaces*/
+a{
+    text-decoration:none;
+    color:inhert;
+}
+
+/*Menu princioal de Navegacion*/
+.main-nav{
+    display:none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/*Lista sea horizontal*/
+.main-nav ul{
+    display:flex;
+    gap: 1.5rem;
+    align-items:center;
+}
+
+.main-nav a {
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.main-nav a:hover {
+    color: #001810(183, 100,255);
+}
+
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background: #fff;
+  color: blue;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  border-top: 1px solid green;
+  background: blue;
+  transition: max-height .28s ease;
+}
+
+.mobile-nav.open { 
+    max-height: 360px; 
+}
+
+.mobile-nav ul { 
+    display: flex; 
+    flex-direction: column; 
+    gap: .3rem; 
+    padding: 1rem 1.25rem; 
+}
+.mobile-nav li a { 
+    display: block; 
+    padding: .7rem .5rem; 
+    border-radius: .6rem; 
+    font-weight: 600; }
+
+@media (min-width: 768px) {
+  .main-nav { display: flex; }
+  .menu-toggle, .mobile-nav { display: none; }
 }
